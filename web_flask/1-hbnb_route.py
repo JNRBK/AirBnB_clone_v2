@@ -14,7 +14,7 @@ def hello_world():
 @app.route("/hbnb", strict_slashes=False)
 def do_hbnb():
     """return a message belongs to this route"""
-    return "<p>HBNB</p>"
+    return "HBNB"
 
 
 if __name__ == "__main__":
