@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Flask module"""
-from email.policy import default
 from flask import Flask
 app = Flask(__name__)
 
@@ -33,7 +32,8 @@ def display_c(text):
     return f"C {text}"
 
 
-@app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
+@app.route('/python', defaults={'text': 'is cool'}, strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
 def display_pytext(text):
     """
     Display python + text
